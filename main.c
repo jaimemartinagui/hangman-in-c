@@ -7,14 +7,6 @@
 
 #include "draw.c"
 
-void cuerda();
-void cabeza();
-void tronco();
-void brazo_der();
-void brazo_izq();
-void pie_der();
-void pie_izq();
-
 int main(){
     
     printf("\n\n");
