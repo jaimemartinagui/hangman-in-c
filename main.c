@@ -190,5 +190,5 @@ int main(){
     printf("                           ¡Gracias por jugar!");
     printf("\n\n");
     
-return 0;
+    return 0;
 }
