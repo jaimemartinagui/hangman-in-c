@@ -77,9 +77,9 @@ int main(){
         // ========================================= COMIENZA EL JUEGO =========================================
         
         char pista[strlen(palabra) + 1];
-        for (i=0; i<strlen(palabra); i++){
+        for (i=0; i<strlen(palabra); i++)
             pista[i] = '_';
-        }
+        
         pista[strlen(palabra) + 1] = '\0';
         
         for (i=0; i<strlen(pista)-1; i++)
@@ -190,5 +190,5 @@ int main(){
     printf("                           ¡Gracias por jugar!");
     printf("\n\n");
     
-return 0;
+    return 0;
 }
