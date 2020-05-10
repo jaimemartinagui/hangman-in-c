@@ -7,7 +7,7 @@
 
 #include "draw.c"
 
-int main(){
+int main() {
     
     printf("\n\n");
     
@@ -42,7 +42,7 @@ int main(){
     
     int juego = 0;
     
-    while (juego == 0){
+    while (juego == 0) {
         
         char *palabra = NULL, resolver, nuevo_juego;
         int dif, x1, i, puntuacion = 0, oportunidades = 7, indicador, contador = 0, contador2 = 0;
@@ -53,7 +53,7 @@ int main(){
         scanf("%i", &dif);
         setbuf(stdin, NULL);
         
-        if (dif != 1 && dif != 2){
+        if (dif != 1 && dif != 2) {
             printf("\nError! Introduzca números 1 o 2 para escoger dificultad.\n\n");
             goto salto1;
         }
@@ -63,9 +63,9 @@ int main(){
         x1 = rand()%(50);
         
         // Palabra aleatoria
-        if (dif == 1){
+        if (dif == 1) {
             palabra = lista1[x1];
-        } else if (dif == 2){
+        } else if (dif == 2) {
             palabra = lista2[x1];
         }
         
@@ -85,16 +85,16 @@ int main(){
         for (i=0; i<strlen(pista)-1; i++)
             printf("%c ", pista[i]);
         
-        while (oportunidades != 0){
+        while (oportunidades != 0) {
             salto2:
             printf("\n\nIntroduzca una letra: ");
             scanf("%c", &letra[contador]);
             setbuf(stdin, NULL);
             fgetc(stdin);
             /* Compruebo si la letra introducida ya se ha introducido antes */
-            if (contador > 0){
-                for (i=0; i<contador; i++){
-                    if (letra[contador] == letra[i]){
+            if (contador > 0) {
+                for (i=0; i<contador; i++) {
+                    if (letra[contador] == letra[i]) {
                         printf("Letra repetida. Por favor, introduzca otra letra.");
                         goto salto2;
                     }
@@ -102,15 +102,15 @@ int main(){
             }
             /* Indicador para ver si se ha acertado la letra o no */
             indicador = 0;
-            for (i=0; i<strlen(palabra); i++){
-                if (letra[contador] == palabra[i]){
+            for (i=0; i<strlen(palabra); i++) {
+                if (letra[contador] == palabra[i]) {
                     puntuacion += 2;
                     indicador++;
                     pista[i] = letra[contador];
                     contador2++;
                 }
             }
-            if (contador2 == strlen(palabra)){
+            if (contador2 == strlen(palabra)) {
                 printf("\n                     Correcto!\n\n");
                 puntuacion += 10;
                 printf("Puntuacion final = %i", puntuacion);
@@ -122,7 +122,7 @@ int main(){
                     juego = 1;
                 goto salto3;
             }
-            if (indicador == 0){
+            if (indicador == 0) {
                 if (puntuacion > 0)
                     puntuacion--;
                 oportunidades--;
@@ -138,7 +138,7 @@ int main(){
                     brazo_izq();
                 if (oportunidades == 1)
                     pie_der();
-                if (oportunidades == 0){
+                if (oportunidades == 0) {
                     pie_izq();
                     printf("\nFin del juego\n");
                     printf("¿Desea jugar otra vez? (s/n): ");
@@ -154,18 +154,18 @@ int main(){
             printf("\nOportunidades = %i", oportunidades);
             printf("\n\n");
             resolver = 'n';
-            if (oportunidades!=0){
+            if (oportunidades!=0) {
                 for (i=0; i<strlen(pista); i++)
                     printf("%c ", pista[i]);
                 printf("\n\n¿Desea resolver? (s/n): ");
                 scanf("%c", &resolver);
                 setbuf(stdin, NULL);
                 fgetc(stdin);
-                if (resolver == 's'){
+                if (resolver == 's') {
                     printf("Introduzca la palabra: ");
                     scanf("%s", solucion);
                     setbuf(stdin, NULL);
-                    if (strcmp(solucion, palabra) == 0){
+                    if (strcmp(solucion, palabra) == 0) {
                         printf("\n                     Correcto!\n\n");
                         puntuacion += 10;
                     } else {

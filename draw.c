@@ -11,7 +11,7 @@ void pie_der();
 void pie_izq();
 
 
-void cuerda(){
+void cuerda() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
@@ -20,21 +20,7 @@ void cuerda(){
 }
 
 
-void cabeza(){
-    printf("\n\n");
-    printf("                        -------------\n");
-    printf("                              |\n");
-    printf("                              |\n");
-    printf("                              |\n");
-    printf("                             ****\n");
-    printf("                           *******\n");
-    printf("                          *********\n");
-    printf("                           *******\n");
-    printf("                             ****\n");
-}
-
-
-void tronco(){
+void cabeza() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
@@ -45,6 +31,20 @@ void tronco(){
     printf("                          *********\n");
     printf("                           *******\n");
     printf("                             ****\n");
+}
+
+
+void tronco() {
+    printf("\n\n");
+    printf("                        -------------\n");
+    printf("                              |\n");
+    printf("                              |\n");
+    printf("                              |\n");
+    printf("                             ****\n");
+    printf("                           *******\n");
+    printf("                          *********\n");
+    printf("                           *******\n");
+    printf("                             ****\n");
     printf("                              |\n");
     printf("                              |\n");
     printf("                              |\n");
@@ -53,7 +53,7 @@ void tronco(){
 }
 
 
-void brazo_der(){
+void brazo_der() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
@@ -72,7 +72,7 @@ void brazo_der(){
 }
 
 
-void brazo_izq(){
+void brazo_izq() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
@@ -91,7 +91,7 @@ void brazo_izq(){
 }
 
 
-void pie_der(){
+void pie_der() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
@@ -115,7 +115,7 @@ void pie_der(){
 }
 
 
-void pie_izq(){
+void pie_izq() {
     printf("\n\n");
     printf("                        -------------\n");
     printf("                              |\n");
