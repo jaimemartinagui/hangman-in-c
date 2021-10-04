@@ -1,4 +1,4 @@
-# Hangman-in-C
+# Hangman in C
 Hangman's game with scoring system developed in C.
 
 I have included a Dockerfile that generates an image to run this app.
